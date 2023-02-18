@@ -28,11 +28,16 @@ function App() {
     .catch()
   }, [])
 
+  //Obter os dados do formulario
+  const aoDigitar = (e) => {
+    setObjProduto({...objProduto, [e.target.name]:e.target.value})
+  }
+
   //Retorno
   return (
     <div>
       <p>{JSON.stringify(objProduto)}</p>
-      <Formulario botao={btnCadastrar} />
+      <Formulario botao={btnCadastrar} eventoTeclado={aoDigitar}/>
       <Tabela vetor={produtos}/>
     </div>
   );
