@@ -20,7 +20,7 @@ function Tabela({vetor}){
                         <td>{indice=1}</td>
                         <td>{obj.nome}</td>
                         <td>{obj.marca}</td>
-                        <td>{obj.preco}</td>
+                        <td step='0.01'>{obj.preco}</td>
                         <td>{obj.tamanho}</td>
                         <td>{obj.sexo}</td>
                         <td><button className="btn btn-success">Selecionar</button></td>

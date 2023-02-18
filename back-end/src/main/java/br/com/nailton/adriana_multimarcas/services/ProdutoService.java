@@ -39,6 +39,9 @@ public class ProdutoService {
         } else if (pm.getTamanho().equals("")) {
             rm.setMensagem("O tamanho é Obrigatório!");
             return new ResponseEntity<ResponseModel>(rm, HttpStatus.BAD_REQUEST);
+        } else if (pm.getSexo().equals("")) {
+            rm.setMensagem("O sexo é Obrigatório!");
+            return new ResponseEntity<ResponseModel>(rm, HttpStatus.BAD_REQUEST);
         } else {
             if (acao.equals("cadastrar")) {
                 return new ResponseEntity<ProdutoModel>(pr.save(pm), HttpStatus.CREATED);

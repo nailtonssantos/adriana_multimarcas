@@ -20,7 +20,7 @@ public class ProdutoModel {
     private String nome;
     private String marca;
     private Float preco;
-    private Character sexo;
+    private String sexo;
     private String tamanho;
 
 }
