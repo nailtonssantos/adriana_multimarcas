@@ -1,5 +1,6 @@
 package br.com.nailton.adriana_multimarcas.services;
 
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -46,6 +47,14 @@ public class ProdutoService {
             }
         }
 
-    };
+    }
+
+    // Método para remover m produto
+    public ResponseEntity<ResponseModel> excluir(Long id) {
+        pr.deleteById(id);
+
+        rm.setMensagem("Produto excluído com sucesso!");
+        return new ResponseEntity<ResponseModel>(rm, HttpStatus.OK);
+    }
 
 }
