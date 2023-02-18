@@ -1,20 +1,27 @@
-function Formulario(){
+function Formulario({botao}){
     return(
         <form>
-            <input type='text' placeholder='Nome do produto' />
-            <input type='text' placeholder='Marca do produto' />
-            <input type='number' step='0.01' min='0' placeholder='Preço do Produto' />
-            <input type='text' placeholder='Tamanho do produto' />
-            <select name="Sexo">
+            <input type='text' placeholder='Nome do produto' className='form-control'/>
+            <input type='text' placeholder='Marca do produto' className='form-control'/>
+            <input type='number' step='0.01' min='0' placeholder='Preço do Produto' className='form-control'/>
+            <input type='text' placeholder='Tamanho do produto' className='form-control'/>
+            <select name="Sexo" className='form-control'>
                 <option value="feminino" selected>Feminino</option>
                 <option value="masculino">Masculino</option>
                 <option value="outro">Outros</option>
             </select>
 
-            <input type='button' value='Cadastrar' />
-            <input type='button' value='Alterar' />
-            <input type='button' value='Remover' />
-            <input type='button' value='Cancelar' />
+            {
+                botao?
+                <input type='button' value='Cadastrar' className='btn btn-primary'/>
+                :
+                <div>
+                    <input type='button' value='Alterar' className='btn btn-warning'/>
+                    <input type='button' value='Remover' className='btn btn-danger'/>
+                    <input type='button' value='Cancelar' className='btn btn-secondary'/>
+                </div>
+            }
+            
         </form>
     )
 }
