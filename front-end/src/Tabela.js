@@ -17,7 +17,7 @@ function Tabela({vetor, selecionar}){
                 {
                     vetor.map((obj, indice) => (
                     <tr key={indice}>
-                        <td>{indice=1}</td>
+                        <td>{indice+1}</td>
                         <td>{obj.nome}</td>
                         <td>{obj.marca}</td>
                         <td step='0.01'>{obj.preco}</td>
